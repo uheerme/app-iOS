@@ -9,12 +9,17 @@
 /* Begin PBXBuildFile section */
 		373BC05E1AA752B8009BB79D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 373BC05D1AA752B8009BB79D /* main.m */; };
 		373BC0611AA752B8009BB79D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 373BC0601AA752B8009BB79D /* AppDelegate.m */; };
-		373BC0641AA752B8009BB79D /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 373BC0631AA752B8009BB79D /* FirstViewController.m */; };
-		373BC0671AA752B8009BB79D /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 373BC0661AA752B8009BB79D /* SecondViewController.m */; };
 		373BC06A1AA752B8009BB79D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 373BC0681AA752B8009BB79D /* Main.storyboard */; };
 		373BC06C1AA752B8009BB79D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 373BC06B1AA752B8009BB79D /* Images.xcassets */; };
 		373BC06F1AA752B8009BB79D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 373BC06D1AA752B8009BB79D /* LaunchScreen.xib */; };
 		373BC07B1AA752B8009BB79D /* SameSoundTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 373BC07A1AA752B8009BB79D /* SameSoundTests.m */; };
+		373BC08F1AA7A21A009BB79D /* GetImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 373BC08E1AA7A21A009BB79D /* GetImageViewController.m */; };
+		373BC0921AA7A245009BB79D /* GetJSONViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 373BC0911AA7A245009BB79D /* GetJSONViewController.m */; };
+		373BC0951AA87257009BB79D /* HTTPMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 373BC0941AA87257009BB79D /* HTTPMessage.m */; };
+		373BC0981AADCD66009BB79D /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 373BC0971AADCD66009BB79D /* NetworkManager.m */; };
+		373BC09E1AB37AC4009BB79D /* PageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 373BC09D1AB37AC4009BB79D /* PageContentViewController.m */; };
+		379DD5C21AB8F2A500440CDB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 379DD5C11AB8F2A500440CDB /* ViewController.m */; };
+		379DD5C51AB90D4900440CDB /* PostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 379DD5C41AB90D4900440CDB /* PostViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,16 +38,26 @@
 		373BC05D1AA752B8009BB79D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		373BC05F1AA752B8009BB79D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		373BC0601AA752B8009BB79D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		373BC0621AA752B8009BB79D /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		373BC0631AA752B8009BB79D /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		373BC0651AA752B8009BB79D /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		373BC0661AA752B8009BB79D /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		373BC0691AA752B8009BB79D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		373BC06B1AA752B8009BB79D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		373BC06E1AA752B8009BB79D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		373BC0741AA752B8009BB79D /* SameSoundTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SameSoundTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		373BC0791AA752B8009BB79D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		373BC07A1AA752B8009BB79D /* SameSoundTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SameSoundTests.m; sourceTree = "<group>"; };
+		373BC08D1AA7A21A009BB79D /* GetImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetImageViewController.h; sourceTree = "<group>"; };
+		373BC08E1AA7A21A009BB79D /* GetImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetImageViewController.m; sourceTree = "<group>"; };
+		373BC0901AA7A245009BB79D /* GetJSONViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetJSONViewController.h; sourceTree = "<group>"; };
+		373BC0911AA7A245009BB79D /* GetJSONViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetJSONViewController.m; sourceTree = "<group>"; };
+		373BC0931AA87257009BB79D /* HTTPMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPMessage.h; sourceTree = "<group>"; };
+		373BC0941AA87257009BB79D /* HTTPMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPMessage.m; sourceTree = "<group>"; };
+		373BC0961AADCD66009BB79D /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NetworkManager.h; path = "../../SimpleURLConnections/Ancillary Code/NetworkManager.h"; sourceTree = "<group>"; };
+		373BC0971AADCD66009BB79D /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NetworkManager.m; path = "../../SimpleURLConnections/Ancillary Code/NetworkManager.m"; sourceTree = "<group>"; };
+		373BC09C1AB37AC4009BB79D /* PageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageContentViewController.h; sourceTree = "<group>"; };
+		373BC09D1AB37AC4009BB79D /* PageContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageContentViewController.m; sourceTree = "<group>"; };
+		379DD5C01AB8F2A500440CDB /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		379DD5C11AB8F2A500440CDB /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		379DD5C31AB90D4900440CDB /* PostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostViewController.h; sourceTree = "<group>"; };
+		379DD5C41AB90D4900440CDB /* PostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,14 +101,24 @@
 			children = (
 				373BC05F1AA752B8009BB79D /* AppDelegate.h */,
 				373BC0601AA752B8009BB79D /* AppDelegate.m */,
-				373BC0621AA752B8009BB79D /* FirstViewController.h */,
-				373BC0631AA752B8009BB79D /* FirstViewController.m */,
-				373BC0651AA752B8009BB79D /* SecondViewController.h */,
-				373BC0661AA752B8009BB79D /* SecondViewController.m */,
 				373BC0681AA752B8009BB79D /* Main.storyboard */,
 				373BC06B1AA752B8009BB79D /* Images.xcassets */,
 				373BC06D1AA752B8009BB79D /* LaunchScreen.xib */,
 				373BC05B1AA752B8009BB79D /* Supporting Files */,
+				373BC08D1AA7A21A009BB79D /* GetImageViewController.h */,
+				373BC08E1AA7A21A009BB79D /* GetImageViewController.m */,
+				373BC0901AA7A245009BB79D /* GetJSONViewController.h */,
+				373BC0911AA7A245009BB79D /* GetJSONViewController.m */,
+				379DD5C31AB90D4900440CDB /* PostViewController.h */,
+				379DD5C41AB90D4900440CDB /* PostViewController.m */,
+				373BC09C1AB37AC4009BB79D /* PageContentViewController.h */,
+				373BC09D1AB37AC4009BB79D /* PageContentViewController.m */,
+				379DD5C01AB8F2A500440CDB /* ViewController.h */,
+				379DD5C11AB8F2A500440CDB /* ViewController.m */,
+				373BC0961AADCD66009BB79D /* NetworkManager.h */,
+				373BC0971AADCD66009BB79D /* NetworkManager.m */,
+				373BC0931AA87257009BB79D /* HTTPMessage.h */,
+				373BC0941AA87257009BB79D /* HTTPMessage.m */,
 			);
 			path = SameSound;
 			sourceTree = "<group>";
@@ -223,10 +248,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				373BC0671AA752B8009BB79D /* SecondViewController.m in Sources */,
+				373BC08F1AA7A21A009BB79D /* GetImageViewController.m in Sources */,
 				373BC0611AA752B8009BB79D /* AppDelegate.m in Sources */,
-				373BC0641AA752B8009BB79D /* FirstViewController.m in Sources */,
+				379DD5C21AB8F2A500440CDB /* ViewController.m in Sources */,
+				373BC09E1AB37AC4009BB79D /* PageContentViewController.m in Sources */,
+				373BC0951AA87257009BB79D /* HTTPMessage.m in Sources */,
+				379DD5C51AB90D4900440CDB /* PostViewController.m in Sources */,
 				373BC05E1AA752B8009BB79D /* main.m in Sources */,
+				373BC0981AADCD66009BB79D /* NetworkManager.m in Sources */,
+				373BC0921AA7A245009BB79D /* GetJSONViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +449,7 @@
 				373BC0801AA752B8009BB79D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		373BC0811AA752B8009BB79D /* Build configuration list for PBXNativeTarget "SameSoundTests" */ = {
 			isa = XCConfigurationList;
@@ -427,6 +458,7 @@
 				373BC0831AA752B8009BB79D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
