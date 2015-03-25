@@ -72,9 +72,11 @@
     if (index == 0) {
         //Load view controller with the Post method.
         pageContentViewController = (PageContentViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"PostViewController"];
+    }else if(index == 1){
+        pageContentViewController = (PageContentViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"PostMusicViewController"];
     }else{
         pageContentViewController = (PageContentViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"PageContentViewController"];
-        pageContentViewController.screenNumber = self.pageLabels[index];
+        //pageContentViewController.screenNumber = self.pageLabels[index];
     }    
     pageContentViewController.pageIndex = index;
 

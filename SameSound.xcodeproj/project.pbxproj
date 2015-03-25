@@ -18,6 +18,8 @@
 		373BC0951AA87257009BB79D /* HTTPMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 373BC0941AA87257009BB79D /* HTTPMessage.m */; };
 		373BC0981AADCD66009BB79D /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 373BC0971AADCD66009BB79D /* NetworkManager.m */; };
 		373BC09E1AB37AC4009BB79D /* PageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 373BC09D1AB37AC4009BB79D /* PageContentViewController.m */; };
+		373FF5DC1AC2189E00E73D00 /* PostMusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 373FF5DB1AC2189E00E73D00 /* PostMusicViewController.m */; };
+		373FF5DE1AC23EC100E73D00 /* relicario.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 373FF5DD1AC23EC100E73D00 /* relicario.mp3 */; };
 		379DD5C21AB8F2A500440CDB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 379DD5C11AB8F2A500440CDB /* ViewController.m */; };
 		379DD5C51AB90D4900440CDB /* PostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 379DD5C41AB90D4900440CDB /* PostViewController.m */; };
 /* End PBXBuildFile section */
@@ -54,6 +56,9 @@
 		373BC0971AADCD66009BB79D /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NetworkManager.m; path = "../../SimpleURLConnections/Ancillary Code/NetworkManager.m"; sourceTree = "<group>"; };
 		373BC09C1AB37AC4009BB79D /* PageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageContentViewController.h; sourceTree = "<group>"; };
 		373BC09D1AB37AC4009BB79D /* PageContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageContentViewController.m; sourceTree = "<group>"; };
+		373FF5DA1AC2189E00E73D00 /* PostMusicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostMusicViewController.h; sourceTree = "<group>"; };
+		373FF5DB1AC2189E00E73D00 /* PostMusicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostMusicViewController.m; sourceTree = "<group>"; };
+		373FF5DD1AC23EC100E73D00 /* relicario.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = relicario.mp3; sourceTree = "<group>"; };
 		379DD5C01AB8F2A500440CDB /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		379DD5C11AB8F2A500440CDB /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		379DD5C31AB90D4900440CDB /* PostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostViewController.h; sourceTree = "<group>"; };
@@ -111,6 +116,8 @@
 				373BC0911AA7A245009BB79D /* GetJSONViewController.m */,
 				379DD5C31AB90D4900440CDB /* PostViewController.h */,
 				379DD5C41AB90D4900440CDB /* PostViewController.m */,
+				373FF5DA1AC2189E00E73D00 /* PostMusicViewController.h */,
+				373FF5DB1AC2189E00E73D00 /* PostMusicViewController.m */,
 				373BC09C1AB37AC4009BB79D /* PageContentViewController.h */,
 				373BC09D1AB37AC4009BB79D /* PageContentViewController.m */,
 				379DD5C01AB8F2A500440CDB /* ViewController.h */,
@@ -119,6 +126,7 @@
 				373BC0971AADCD66009BB79D /* NetworkManager.m */,
 				373BC0931AA87257009BB79D /* HTTPMessage.h */,
 				373BC0941AA87257009BB79D /* HTTPMessage.m */,
+				373FF5DD1AC23EC100E73D00 /* relicario.mp3 */,
 			);
 			path = SameSound;
 			sourceTree = "<group>";
@@ -229,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				373BC06A1AA752B8009BB79D /* Main.storyboard in Resources */,
+				373FF5DE1AC23EC100E73D00 /* relicario.mp3 in Resources */,
 				373BC06F1AA752B8009BB79D /* LaunchScreen.xib in Resources */,
 				373BC06C1AA752B8009BB79D /* Images.xcassets in Resources */,
 			);
@@ -254,6 +263,7 @@
 				373BC09E1AB37AC4009BB79D /* PageContentViewController.m in Sources */,
 				373BC0951AA87257009BB79D /* HTTPMessage.m in Sources */,
 				379DD5C51AB90D4900440CDB /* PostViewController.m in Sources */,
+				373FF5DC1AC2189E00E73D00 /* PostMusicViewController.m in Sources */,
 				373BC05E1AA752B8009BB79D /* main.m in Sources */,
 				373BC0981AADCD66009BB79D /* NetworkManager.m in Sources */,
 				373BC0921AA7A245009BB79D /* GetJSONViewController.m in Sources */,

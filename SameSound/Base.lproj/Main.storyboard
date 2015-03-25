@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -174,6 +174,56 @@
             </objects>
             <point key="canvasLocation" x="1574" y="-415"/>
         </scene>
+        <!--Post Music View Controller-->
+        <scene sceneID="MTw-dL-qs0">
+            <objects>
+                <viewController storyboardIdentifier="PostMusicViewController" id="rwy-CH-GvD" customClass="PostMusicViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="snh-ea-dQm"/>
+                        <viewControllerLayoutGuide type="bottom" id="PME-3o-7md"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6AQ-IK-ovE">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="http://samesound.cfapps.io/api/channels" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fU0-gd-QXZ">
+                                <rect key="frame" x="16" y="28" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="slS-pR-Cdo">
+                                <rect key="frame" x="538" y="28" width="46" height="30"/>
+                                <state key="normal" title="Post">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="postAction:" destination="rwy-CH-GvD" eventType="touchUpInside" id="TJ8-DO-awo"/>
+                                    <action selector="postAction:" destination="dd4-6V-6qF" eventType="touchUpInside" id="cH9-pu-fHM"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S75-HC-jcI">
+                                <rect key="frame" x="194" y="70" width="212" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fU0-gd-QXZ" firstAttribute="leading" secondItem="6AQ-IK-ovE" secondAttribute="leadingMargin" id="36i-a8-0V7"/>
+                            <constraint firstItem="slS-pR-Cdo" firstAttribute="trailing" secondItem="6AQ-IK-ovE" secondAttribute="trailingMargin" id="Lfo-8e-1uq"/>
+                            <constraint firstItem="slS-pR-Cdo" firstAttribute="leading" secondItem="fU0-gd-QXZ" secondAttribute="trailing" constant="10" id="c9x-td-TkO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="statusLabel" destination="S75-HC-jcI" id="SQk-lt-59j"/>
+                        <outlet property="urlText" destination="fU0-gd-QXZ" id="QDo-kE-C3S"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l5o-7W-CoN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2258" y="-415"/>
+        </scene>
         <!--Page Content View Controller-->
         <scene sceneID="khS-1z-ff6">
             <objects>
@@ -201,7 +251,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WCM-l5-ybJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2210" y="-415"/>
+            <point key="canvasLocation" x="2946" y="-415"/>
         </scene>
         <!--Get JSON-->
         <scene sceneID="wg7-f3-ORb">
