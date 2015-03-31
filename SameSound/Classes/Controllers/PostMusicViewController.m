@@ -8,6 +8,7 @@
 
 #import "PostMusicViewController.h"
 #import "NetworkManager.h"
+#import "POSTHelper.h"
 
 @interface PostMusicViewController ()
 
@@ -44,32 +45,13 @@
     return (self.connection != nil);
 }
 
-- (NSString *)generateBoundaryString
-{
-    CFUUIDRef       uuid;
-    CFStringRef     uuidStr;
-    NSString *      result;
-    
-    uuid = CFUUIDCreate(NULL);
-    assert(uuid != NULL);
-    
-    uuidStr = CFUUIDCreateString(NULL, uuid);
-    assert(uuidStr != NULL);
-    
-    result = [NSString stringWithFormat:@"iOS_SameSound_Boundary-%@", uuidStr];
-    
-    CFRelease(uuidStr);
-    CFRelease(uuid);
-    
-    return result;
-}
-
 -(void)startSendMusic{
     BOOL success;
     NSURL * url;
-    NSMutableURLRequest * request;
+    NSURLRequest * request;
     
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"relicario" ofType:@"mp3"];
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"relicario-cut" ofType:@"mp3"];
+    NSLog(@"%@",filePath);
     
     assert([[NSFileManager defaultManager] fileExistsAtPath:filePath]);
     assert( [filePath.pathExtension isEqual:@"mp3"] || [filePath.pathExtension isEqual:@"mpeg"] );
@@ -88,60 +70,14 @@
     if ( ! success) {
         self.statusLabel.text = @"Invalid URL";
     }
-    
-    NSString * boundaryStr = [self generateBoundaryString];
-    assert(boundaryStr != nil);
-    
-    NSString * bodyPrefixStr = [NSString stringWithFormat:
-           @
-           // empty preamble
-           "\r\n"
-           "--%@\r\n"
-           "Content-Disposition: form-data; name=\"fileContents\"; filename=\"%@\"\r\n"
-           "Content-Type: %@\r\n"
-           "\r\n",
-           boundaryStr,
-           @"relicario.mp3",
-           @"audio/mp3"
-    ];
-    NSString *bodySuffixStr = [NSString stringWithFormat:
-         @
-         "\r\n"
-         "--%@\r\n"
-         "Content-Disposition: form-data; name=\"uploadButton\"\r\n"
-         "\r\n"
-         "Upload File\r\n"
-         "--%@--\r\n"
-         "\r\n"
-         //empty epilogue
-         ,
-         boundaryStr, 
-         boundaryStr
-    ];
-    NSData *bodypreffix = [bodyPrefixStr dataUsingEncoding:NSASCIIStringEncoding];
-    NSData *bodySuffix = [bodySuffixStr dataUsingEncoding:NSASCIIStringEncoding];
-    
-    NSNumber *fileLengthNum = (NSNumber *) [[[NSFileManager defaultManager] attributesOfItemAtPath:filePath error:NULL] objectForKey:NSFileSize];
-
-    unsigned long long bodyLength = (unsigned long long) [bodypreffix length]
-     + [fileLengthNum unsignedLongLongValue]
-     + (unsigned long long) [bodySuffix length];
 
     // Open a connection for the URL, configured to POST the file.
     
-    request = [NSMutableURLRequest requestWithURL:url];
-    assert(request != nil);
+    NSDictionary *fields = [NSDictionary dictionaryWithObjectsAndKeys:@"JPMusicFromIOS", @"Name", @"6", @"ChannelID", nil];
     
-    [request setHTTPMethod:@"POST"];
+//    NSDictionary *fields = [NSDictionary dictionaryWithObjectsAndKeys:@"1005", @"ChannelID", nil];
     
-    [request setValue:[NSString stringWithFormat:@"multipart/form-data; boundary=\"%@\"", boundaryStr] forHTTPHeaderField:@"Content-Type"];
-    [request setValue:[NSString stringWithFormat:@"%llu", bodyLength] forHTTPHeaderField:@"Content-Length"];
-    
-    NSMutableData * body = (NSMutableData *)bodypreffix;
-    [body appendData:[NSData dataWithContentsOfFile:filePath]];
-    [body appendData:bodySuffix];
-    
-    [request setHTTPBody:body];
+    request = [POSTHelper postFile:filePath withFields:fields toURL:url];
     
     self.connection = [NSURLConnection connectionWithRequest:request delegate:self];
 }
@@ -157,6 +93,20 @@
     NSLog(@"didFailWithError description: %@", error.description);
 }
 
+- (void)connection:(NSURLConnection *)theConnection didReceiveData:(NSData *)data{
+    NSError * JSONError;
+    NSDictionary * channels = [NSJSONSerialization JSONObjectWithData:data options:0 error:&JSONError];
+    
+    self.statusLabel.text = @"Receiving";
+    
+    if(JSONError != nil){
+        NSLog(@"Error in JSON Serialization: %@", JSONError.description);
+        self.statusLabel.text = @"JSON Serialization error";
+        self.connection = nil;
+    }else{
+        NSLog(@"JSON Response: %@", channels.description);
+    }
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
