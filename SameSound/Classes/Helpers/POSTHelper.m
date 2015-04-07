@@ -43,15 +43,15 @@
     [body appendFormat:@
      "--%@\r\n"
      "Content-Disposition: form-data; name=\"music\"; filename=\"%@\"\r\n"
-     "Content-Type: audio/mp3\r\n"
+     "Content-Type: audio/mpeg\r\n"
      "\r\n",
      boundaryStr, fileName
      ];
     
     NSString *bodySufix = [NSString stringWithFormat:@
-                           "\r\n\r\n"
-                           "--%@--\r\n",
-                           boundaryStr];
+        "\r\n"
+        "--%@--\r\n",
+        boundaryStr];
 
     //Building the data
     bodyData = (NSMutableData *)[body dataUsingEncoding:NSUTF8StringEncoding];

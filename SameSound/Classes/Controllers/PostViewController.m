@@ -12,6 +12,7 @@
 @interface PostViewController ()
 
 @property (weak, nonatomic) IBOutlet UITextField *channelNameInput;
+@property (weak, nonatomic) IBOutlet UITextField *ownerText;
 @property (weak, nonatomic) IBOutlet UITextField *urlText;
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel;
 @property (nonatomic, strong, readwrite) NSURLConnection *  connection;
@@ -68,7 +69,7 @@
 - (NSData*)transformToJson{
     NSError *jsonError;
     
-    NSDictionary *jsonDict = [NSDictionary dictionaryWithObjectsAndKeys:self.channelNameInput.text, @"name", nil];
+    NSDictionary *jsonDict = [NSDictionary dictionaryWithObjectsAndKeys:self.channelNameInput.text, @"name", self.ownerText.text, @"owner", nil];
     
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:jsonDict options:0 error:&jsonError];
     NSLog(jsonDict.description);

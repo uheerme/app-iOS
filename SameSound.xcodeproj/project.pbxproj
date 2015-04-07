@@ -25,6 +25,7 @@
 		373FF60C1AC3608400E73D00 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 373FF6091AC3608400E73D00 /* main.m */; };
 		373FF60F1AC3662800E73D00 /* POSTHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 373FF60E1AC3662800E73D00 /* POSTHelper.m */; };
 		37C697901AC4620600BFE7C1 /* relicario-cut.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 37C6978F1AC4620600BFE7C1 /* relicario-cut.mp3 */; };
+		37C697AA1ACB920300BFE7C1 /* GetMusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C697A91ACB920300BFE7C1 /* GetMusicViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,11 +70,8 @@
 		373FF60D1AC3662800E73D00 /* POSTHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POSTHelper.h; sourceTree = "<group>"; };
 		373FF60E1AC3662800E73D00 /* POSTHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POSTHelper.m; sourceTree = "<group>"; };
 		37C6978F1AC4620600BFE7C1 /* relicario-cut.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "relicario-cut.mp3"; sourceTree = "<group>"; };
-		37C6979B1ACB54C500BFE7C1 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		37C6979D1ACB54EC00BFE7C1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		37C6979F1ACB54F900BFE7C1 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		37C697A11ACB550600BFE7C1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		37C697A31ACB552400BFE7C1 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		37C697A81ACB920300BFE7C1 /* GetMusicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetMusicViewController.h; sourceTree = "<group>"; };
+		37C697A91ACB920300BFE7C1 /* GetMusicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetMusicViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,11 +95,6 @@
 		373BC04F1AA752B8009BB79D = {
 			isa = PBXGroup;
 			children = (
-				37C697A31ACB552400BFE7C1 /* libz.dylib */,
-				37C697A11ACB550600BFE7C1 /* CoreGraphics.framework */,
-				37C6979F1ACB54F900BFE7C1 /* MobileCoreServices.framework */,
-				37C6979D1ACB54EC00BFE7C1 /* SystemConfiguration.framework */,
-				37C6979B1ACB54C500BFE7C1 /* CFNetwork.framework */,
 				373BC05A1AA752B8009BB79D /* SameSound */,
 				373BC0771AA752B8009BB79D /* SameSoundTests */,
 				373BC0591AA752B8009BB79D /* Products */,
@@ -164,12 +157,14 @@
 				373FF5E81AC35C9500E73D00 /* GetImageViewController.m */,
 				373FF5E91AC35C9500E73D00 /* GetJSONViewController.h */,
 				373FF5EA1AC35C9500E73D00 /* GetJSONViewController.m */,
-				373FF5EB1AC35C9500E73D00 /* PageContentViewController.h */,
-				373FF5EC1AC35C9500E73D00 /* PageContentViewController.m */,
-				373FF5ED1AC35C9500E73D00 /* PostMusicViewController.h */,
-				373FF5EE1AC35C9500E73D00 /* PostMusicViewController.m */,
 				373FF5EF1AC35C9500E73D00 /* PostViewController.h */,
 				373FF5F01AC35C9500E73D00 /* PostViewController.m */,
+				373FF5ED1AC35C9500E73D00 /* PostMusicViewController.h */,
+				373FF5EE1AC35C9500E73D00 /* PostMusicViewController.m */,
+				37C697A81ACB920300BFE7C1 /* GetMusicViewController.h */,
+				37C697A91ACB920300BFE7C1 /* GetMusicViewController.m */,
+				373FF5EB1AC35C9500E73D00 /* PageContentViewController.h */,
+				373FF5EC1AC35C9500E73D00 /* PageContentViewController.m */,
 				373FF5F11AC35C9500E73D00 /* ViewController.h */,
 				373FF5F21AC35C9500E73D00 /* ViewController.m */,
 			);
@@ -325,6 +320,7 @@
 				373FF60F1AC3662800E73D00 /* POSTHelper.m in Sources */,
 				373FF60A1AC3608400E73D00 /* AppDelegate.m in Sources */,
 				373FF5F81AC35C9500E73D00 /* GetImageViewController.m in Sources */,
+				37C697AA1ACB920300BFE7C1 /* GetMusicViewController.m in Sources */,
 				373FF5FA1AC35C9500E73D00 /* PageContentViewController.m in Sources */,
 				373FF5FB1AC35C9500E73D00 /* PostMusicViewController.m in Sources */,
 				373FF60C1AC3608400E73D00 /* main.m in Sources */,

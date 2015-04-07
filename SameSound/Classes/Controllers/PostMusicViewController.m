@@ -73,7 +73,7 @@
 
     // Open a connection for the URL, configured to POST the file.
     
-    NSDictionary *fields = [NSDictionary dictionaryWithObjectsAndKeys:@"JPMusicFromIOS", @"Name", @"6", @"ChannelID", nil];
+    NSDictionary *fields = [NSDictionary dictionaryWithObjectsAndKeys:@"JPMusicIOS", @"Name", @"9", @"ChannelID", nil];
     
 //    NSDictionary *fields = [NSDictionary dictionaryWithObjectsAndKeys:@"1005", @"ChannelID", nil];
     

@@ -74,6 +74,8 @@
         pageContentViewController = (PageContentViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"PostViewController"];
     }else if(index == 1){
         pageContentViewController = (PageContentViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"PostMusicViewController"];
+    }else if(index == 2){
+        pageContentViewController = (PageContentViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"GetMusicViewController"];
     }else{
         pageContentViewController = (PageContentViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"PageContentViewController"];
         //pageContentViewController.screenNumber = self.pageLabels[index];
