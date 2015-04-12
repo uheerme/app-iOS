@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3714CB8D1ADADEB700973CEA /* Synchronizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3714CB8C1ADADEB700973CEA /* Synchronizer.m */; };
 		373BC06A1AA752B8009BB79D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 373BC0681AA752B8009BB79D /* Main.storyboard */; };
 		373BC06C1AA752B8009BB79D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 373BC06B1AA752B8009BB79D /* Images.xcassets */; };
 		373BC06F1AA752B8009BB79D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 373BC06D1AA752B8009BB79D /* LaunchScreen.xib */; };
@@ -23,7 +24,7 @@
 		373FF60A1AC3608400E73D00 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 373FF6071AC3608400E73D00 /* AppDelegate.m */; };
 		373FF60B1AC3608400E73D00 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 373FF6081AC3608400E73D00 /* Info.plist */; };
 		373FF60C1AC3608400E73D00 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 373FF6091AC3608400E73D00 /* main.m */; };
-		373FF60F1AC3662800E73D00 /* POSTHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 373FF60E1AC3662800E73D00 /* POSTHelper.m */; };
+		373FF60F1AC3662800E73D00 /* RESTHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 373FF60E1AC3662800E73D00 /* RESTHelper.m */; };
 		37C697901AC4620600BFE7C1 /* relicario-cut.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 37C6978F1AC4620600BFE7C1 /* relicario-cut.mp3 */; };
 		37C697AA1ACB920300BFE7C1 /* GetMusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C697A91ACB920300BFE7C1 /* GetMusicViewController.m */; };
 /* End PBXBuildFile section */
@@ -39,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3714CB8B1ADADEB700973CEA /* Synchronizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Synchronizer.h; sourceTree = "<group>"; };
+		3714CB8C1ADADEB700973CEA /* Synchronizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Synchronizer.m; sourceTree = "<group>"; };
 		373BC0581AA752B8009BB79D /* SameSound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SameSound.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		373BC0691AA752B8009BB79D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		373BC06B1AA752B8009BB79D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -67,8 +70,8 @@
 		373FF6071AC3608400E73D00 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		373FF6081AC3608400E73D00 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		373FF6091AC3608400E73D00 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		373FF60D1AC3662800E73D00 /* POSTHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POSTHelper.h; sourceTree = "<group>"; };
-		373FF60E1AC3662800E73D00 /* POSTHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POSTHelper.m; sourceTree = "<group>"; };
+		373FF60D1AC3662800E73D00 /* RESTHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RESTHelper.h; sourceTree = "<group>"; };
+		373FF60E1AC3662800E73D00 /* RESTHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RESTHelper.m; sourceTree = "<group>"; };
 		37C6978F1AC4620600BFE7C1 /* relicario-cut.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "relicario-cut.mp3"; sourceTree = "<group>"; };
 		37C697A81ACB920300BFE7C1 /* GetMusicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetMusicViewController.h; sourceTree = "<group>"; };
 		37C697A91ACB920300BFE7C1 /* GetMusicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetMusicViewController.m; sourceTree = "<group>"; };
@@ -176,8 +179,10 @@
 			children = (
 				373FF6021AC35DDD00E73D00 /* NetworkManager.h */,
 				373FF6031AC35DDD00E73D00 /* NetworkManager.m */,
-				373FF60D1AC3662800E73D00 /* POSTHelper.h */,
-				373FF60E1AC3662800E73D00 /* POSTHelper.m */,
+				373FF60D1AC3662800E73D00 /* RESTHelper.h */,
+				373FF60E1AC3662800E73D00 /* RESTHelper.m */,
+				3714CB8B1ADADEB700973CEA /* Synchronizer.h */,
+				3714CB8C1ADADEB700973CEA /* Synchronizer.m */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -313,11 +318,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3714CB8D1ADADEB700973CEA /* Synchronizer.m in Sources */,
 				373FF5FD1AC35C9500E73D00 /* ViewController.m in Sources */,
 				373FF5FE1AC35C9500E73D00 /* HTTPMessage.m in Sources */,
 				373FF6041AC35DDD00E73D00 /* NetworkManager.m in Sources */,
 				373FF5FC1AC35C9500E73D00 /* PostViewController.m in Sources */,
-				373FF60F1AC3662800E73D00 /* POSTHelper.m in Sources */,
+				373FF60F1AC3662800E73D00 /* RESTHelper.m in Sources */,
 				373FF60A1AC3608400E73D00 /* AppDelegate.m in Sources */,
 				373FF5F81AC35C9500E73D00 /* GetImageViewController.m in Sources */,
 				37C697AA1ACB920300BFE7C1 /* GetMusicViewController.m in Sources */,

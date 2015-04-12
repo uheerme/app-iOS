@@ -8,7 +8,7 @@
 
 #import "PostMusicViewController.h"
 #import "NetworkManager.h"
-#import "POSTHelper.h"
+#import "RESTHelper.h"
 
 @interface PostMusicViewController ()
 
@@ -77,7 +77,7 @@
     
 //    NSDictionary *fields = [NSDictionary dictionaryWithObjectsAndKeys:@"1005", @"ChannelID", nil];
     
-    request = [POSTHelper postFile:filePath withFields:fields toURL:url];
+    request = [RESTHelper postFile:filePath withFields:fields toURL:url];
     
     self.connection = [NSURLConnection connectionWithRequest:request delegate:self];
 }

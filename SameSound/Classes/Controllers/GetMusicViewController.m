@@ -38,7 +38,7 @@
 
 -(void)startGetMusic{
     NSURL * url;
-    NSURLRequest * request;
+    NSMutableURLRequest * request;
     NSLog(@"startGetMusic");
     
     assert(self.connection == nil);
@@ -46,7 +46,8 @@
     url = [[NetworkManager sharedInstance] smartURLForString:self.urlText.text];
     assert(url != nil);
     
-    request = [NSURLRequest requestWithURL:url];
+    request = [NSMutableURLRequest requestWithURL:url];
+//    [request setValue:@"bytes=1-50000" forHTTPHeaderField:@"Range"];
     
     self.connection = [NSURLConnection connectionWithRequest:request delegate:self];
     
@@ -74,8 +75,8 @@
 //    NSDictionary * channels = [NSJSONSerialization JSONObjectWithData:data options:0 error:&JSONError];
     
     [self.musicData appendData:data];
-    self.progressView.progress = ((100.0/self.urlResponse.expectedContentLength)*self.musicData.length)/100;
-    NSLog(@"Progress: %llu", self.musicData.length/self.urlResponse.expectedContentLength);
+    self.progressView.progress = (float)self.musicData.length/(float)self.urlResponse.expectedContentLength;
+    NSLog(@"Progress: %f", (float)self.musicData.length/(float)self.urlResponse.expectedContentLength);
     NSLog(@"didReceiveData response.expectedContentLength: %lld", self.urlResponse.expectedContentLength);
     NSLog(@"didReceiveData musicData.length: %lu", (unsigned long)data.length);
     

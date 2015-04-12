@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface POSTHelper : NSObject
+@interface RESTHelper : NSObject
 
++(NSString *) routePrefix;
 +(NSURLRequest *) postFile:(NSString *)filePath withFields:(NSDictionary *)fields toURL:(NSURL *)url;
 
 @end

@@ -77,11 +77,21 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rKX-BS-yTu">
                                 <rect key="frame" x="172" y="231" width="256" height="137"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ug9-zO-IqG">
+                                <rect key="frame" x="229" y="478" width="142" height="30"/>
+                                <state key="normal" title="Synchronize">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="synchronizeAction:" destination="9pv-A4-QxB" eventType="touchUpInside" id="PDZ-UQ-32a"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Tya-xm-kOP" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailingMargin" id="AWR-MJ-LFT"/>
                             <constraint firstItem="CJe-m5-jVf" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="EhY-WZ-rm2"/>
+                            <constraint firstAttribute="centerX" secondItem="Ug9-zO-IqG" secondAttribute="centerX" id="KG5-1l-B61"/>
                             <constraint firstItem="GqH-3w-GfY" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="ROH-NG-x9r"/>
                             <constraint firstItem="GqH-3w-GfY" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="80" id="ZV9-Ri-jcW"/>
                             <constraint firstItem="Tya-xm-kOP" firstAttribute="leading" secondItem="CJe-m5-jVf" secondAttribute="trailing" constant="8" id="add-uP-VsB"/>
@@ -112,11 +122,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="http://54.69.27.129/api/channels" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DQr-Bc-E8w">
-                                <rect key="frame" x="16" y="28" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9S-vb-xk2">
                                 <rect key="frame" x="538" y="28" width="46" height="30"/>
                                 <state key="normal" title="Post">
@@ -151,13 +156,18 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5FF-cg-kGU">
+                                <rect key="frame" x="346" y="173" width="222" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pZd-eP-dhy">
                                 <rect key="frame" x="346" y="235" width="222" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5FF-cg-kGU">
-                                <rect key="frame" x="346" y="173" width="222" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="http://54.69.27.129/api/channels" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DQr-Bc-E8w">
+                                <rect key="frame" x="16" y="28" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>

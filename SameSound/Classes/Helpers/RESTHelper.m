@@ -6,9 +6,11 @@
 //
 //
 
-#import "POSTHelper.h"
+#import "RESTHelper.h"
 
-@implementation POSTHelper
+@implementation RESTHelper
+
++(NSString *)routePrefix{ return @"http://54.69.27.129"; }
 
 +(NSURLRequest *) postFile:(NSString *)filePath withFields:(NSDictionary *)fields toURL:(NSURL *)url{
     NSMutableURLRequest *request;
@@ -17,7 +19,7 @@
     NSMutableData *bodyData;
     
     //Boundary, that initiate every field part and finish the
-    NSString *boundaryStr = [POSTHelper generateBoundaryString];
+    NSString *boundaryStr = [RESTHelper generateBoundaryString];
     
     //Configurating Header
     request = [NSMutableURLRequest requestWithURL:url];

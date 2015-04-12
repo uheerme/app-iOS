@@ -9,16 +9,16 @@
 #import "GetImageViewController.h"
 
 #import "NetworkManager.h"
+#import "Synchronizer.h"
 
-#import "HTTPMessage.h"
-
-@interface GetImageViewController ()
+@interface GetImageViewController () <SynchronizerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *getButton;
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property int counter;
 @property (nonatomic, strong, readwrite) NSURLConnection *                  connection;
+@property (nonatomic, strong) Synchronizer *                                synchronizer;
 @property (nonatomic, copy,   readwrite) NSString *                         filePath;
 @property (nonatomic, strong, readwrite) NSOutputStream *                   fileStream;
 @property (weak, nonatomic) IBOutlet UITextField *urlText;
@@ -32,6 +32,14 @@
     // Do any additional setup after loading the view.
     
     self.counter = 0;
+}
+
+- (IBAction)synchronizeAction:(id)sender {
+    self.synchronizer = [[Synchronizer alloc] initWithDelegate:self];
+}
+
+-(void)systemAndServerClockDifference:(NSTimeInterval) serverDifference{
+    NSLog(@"serverDifference: %f", serverDifference);
 }
 
 - (void)didReceiveMemoryWarning {
