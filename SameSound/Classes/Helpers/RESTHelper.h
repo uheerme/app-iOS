@@ -10,7 +10,7 @@
 
 @interface RESTHelper : NSObject
 
-+(NSString *) routePrefix;
++(NSURL *) getRouteWithSufix:(NSString *)sufix;
 +(NSURLRequest *) postFile:(NSString *)filePath withFields:(NSDictionary *)fields toURL:(NSURL *)url;
 
 @end

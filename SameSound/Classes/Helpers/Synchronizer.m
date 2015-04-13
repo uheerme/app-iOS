@@ -37,8 +37,7 @@
     
     //Connection's stuff
     NSURLRequest *request;
-    NSString *url = [NSString stringWithFormat:@"%@/api/Status/Now", [RESTHelper routePrefix]];
-    request = [NSURLRequest requestWithURL:[[NetworkManager sharedInstance] smartURLForString:url]];
+    request = [NSURLRequest requestWithURL:[RESTHelper getRouteWithSufix:@"api/Status/Now"]];
     
     self.connection = [NSURLConnection connectionWithRequest:request delegate:self];
     
@@ -67,7 +66,6 @@
         serverTime = [serverTime dateByAddingTimeInterval:self.tripTime/2];
         [delegate_ systemAndServerClockDifference: [serverTime timeIntervalSinceNow]];
     }
-    
 }
 
 @end

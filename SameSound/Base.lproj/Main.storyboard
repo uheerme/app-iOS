@@ -297,6 +297,98 @@
             </objects>
             <point key="canvasLocation" x="2960" y="-415"/>
         </scene>
+        <!--Channel Connection Controller-->
+        <scene sceneID="WXq-YP-We4">
+            <objects>
+                <viewController storyboardIdentifier="ChannelConnectionController" id="y2D-0m-Frx" customClass="ChannelConnectionController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oOj-4p-Rsk"/>
+                        <viewControllerLayoutGuide type="bottom" id="b1H-is-RWe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pfy-cB-2Vm">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Channel Id" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PY8-zX-gl4">
+                                <rect key="frame" x="127" y="73" width="178" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ny7-5g-xS4">
+                                <rect key="frame" x="313" y="73" width="66" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Listen">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="ListenAction:" destination="y2D-0m-Frx" eventType="touchUpInside" id="Kdf-ir-KgH"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cgh-x0-R6T">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Name:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mNP-K1-ydd">
+                                <rect key="frame" x="249" y="136" width="56" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xNJ-x2-3Xy">
+                                <rect key="frame" x="313" y="136" width="56" height="21"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="channel">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="smallSystem"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Playing:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wiX-4T-26G">
+                                <rect key="frame" x="235" y="165" width="70" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HnL-kD-p6b">
+                                <rect key="frame" x="313" y="165" width="56" height="21"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Music">
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PY8-zX-gl4" firstAttribute="trailing" secondItem="Cgh-x0-R6T" secondAttribute="trailing" id="0MI-dg-z0b"/>
+                            <constraint firstAttribute="centerX" secondItem="Cgh-x0-R6T" secondAttribute="centerX" id="4mH-Hg-8it"/>
+                            <constraint firstItem="Cgh-x0-R6T" firstAttribute="trailing" secondItem="wiX-4T-26G" secondAttribute="trailing" id="SC3-u9-76Z"/>
+                            <constraint firstItem="Cgh-x0-R6T" firstAttribute="leading" secondItem="ny7-5g-xS4" secondAttribute="leading" id="azC-mc-sNi"/>
+                            <constraint firstItem="Cgh-x0-R6T" firstAttribute="trailing" secondItem="mNP-K1-ydd" secondAttribute="trailing" id="gFf-wa-WzD"/>
+                            <constraint firstItem="Cgh-x0-R6T" firstAttribute="leading" secondItem="xNJ-x2-3Xy" secondAttribute="leading" id="nsk-oo-X4a"/>
+                            <constraint firstItem="HnL-kD-p6b" firstAttribute="leading" secondItem="Cgh-x0-R6T" secondAttribute="leading" id="vqF-Dh-Pbf"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="channelIdText" destination="PY8-zX-gl4" id="4LJ-DW-Iop"/>
+                        <outlet property="channelLabel" destination="mNP-K1-ydd" id="WA0-LV-sKi"/>
+                        <outlet property="channelName" destination="xNJ-x2-3Xy" id="MfU-g1-14p"/>
+                        <outlet property="musicName" destination="HnL-kD-p6b" id="58e-Ci-HKk"/>
+                        <outlet property="playingLabel" destination="wiX-4T-26G" id="U2k-1b-TqA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TU7-Zq-NNo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3651" y="-415"/>
+        </scene>
         <!--Page Content View Controller-->
         <scene sceneID="khS-1z-ff6">
             <objects>
@@ -324,7 +416,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WCM-l5-ybJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3674" y="-415"/>
+            <point key="canvasLocation" x="4342" y="-415"/>
         </scene>
         <!--Get JSON-->
         <scene sceneID="wg7-f3-ORb">

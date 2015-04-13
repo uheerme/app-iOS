@@ -9,20 +9,33 @@
 #import "GetMusicViewController.h"
 #import "NetworkManager.h"
 #import <AVFoundation/AVAudioPlayer.h>
+#import "Synchronizer.h"
 
-@interface GetMusicViewController()
+@interface GetMusicViewController() <SynchronizerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *urlText;
-@property (nonatomic, strong, readwrite) NSURLConnection *  connection;
+@property (nonatomic, strong, readwrite) NSURLConnection *connection;
+@property (nonatomic, strong) Synchronizer *synchronizer;
 @property (weak, nonatomic) IBOutlet UIProgressView *progressView;
 @property (strong, nonatomic) NSMutableData *musicData;
 @property (strong, nonatomic) NSURLResponse *urlResponse;
+@property (nonatomic) NSTimeInterval systemAndServerTimeDifference;
 
 @property (nonatomic, retain) AVAudioPlayer *player;
 
 @end
 
 @implementation GetMusicViewController
+
+- (void)viewDidLoad{
+    [super viewDidLoad];
+    self.synchronizer = [[Synchronizer alloc] initWithDelegate:self];
+}
+
+-(void)systemAndServerClockDifference:(NSTimeInterval)serverDifference{
+    self.systemAndServerTimeDifference = serverDifference;
+    NSLog(@"GetMusic serverTimeDifference: %f", serverDifference);
+}
 
 - (IBAction)getMusicAction:(id)sender {
     NSLog(@"Get Music button pressed");
@@ -93,6 +106,7 @@
     self.player = newPlayer;
     
     [self.player prepareToPlay];
+    
     [self.player play];
 }
 

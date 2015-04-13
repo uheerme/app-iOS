@@ -7,10 +7,14 @@
 //
 
 #import "RESTHelper.h"
+#import "NetworkManager.h"
 
 @implementation RESTHelper
 
-+(NSString *)routePrefix{ return @"http://54.69.27.129"; }
++(NSURL *)getRouteWithSufix:(NSString *)sufix{
+    NSString *url = [NSString stringWithFormat:@"http://54.69.27.129/%@", sufix];
+    return [[NetworkManager sharedInstance] smartURLForString:url];
+}
 
 +(NSURLRequest *) postFile:(NSString *)filePath withFields:(NSDictionary *)fields toURL:(NSURL *)url{
     NSMutableURLRequest *request;

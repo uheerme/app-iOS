@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3714CB8D1ADADEB700973CEA /* Synchronizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3714CB8C1ADADEB700973CEA /* Synchronizer.m */; };
+		3714CB901ADB273000973CEA /* ChannelConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 3714CB8F1ADB273000973CEA /* ChannelConnection.m */; };
+		3714CB961ADB29C000973CEA /* ChannelConnectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3714CB951ADB29C000973CEA /* ChannelConnectionController.m */; };
+		3714CB9C1ADB620500973CEA /* MusicStreamConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 3714CB9B1ADB620500973CEA /* MusicStreamConnection.m */; };
 		373BC06A1AA752B8009BB79D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 373BC0681AA752B8009BB79D /* Main.storyboard */; };
 		373BC06C1AA752B8009BB79D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 373BC06B1AA752B8009BB79D /* Images.xcassets */; };
 		373BC06F1AA752B8009BB79D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 373BC06D1AA752B8009BB79D /* LaunchScreen.xib */; };
@@ -42,6 +45,12 @@
 /* Begin PBXFileReference section */
 		3714CB8B1ADADEB700973CEA /* Synchronizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Synchronizer.h; sourceTree = "<group>"; };
 		3714CB8C1ADADEB700973CEA /* Synchronizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Synchronizer.m; sourceTree = "<group>"; };
+		3714CB8E1ADB273000973CEA /* ChannelConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChannelConnection.h; sourceTree = "<group>"; };
+		3714CB8F1ADB273000973CEA /* ChannelConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChannelConnection.m; sourceTree = "<group>"; };
+		3714CB941ADB29C000973CEA /* ChannelConnectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChannelConnectionController.h; sourceTree = "<group>"; };
+		3714CB951ADB29C000973CEA /* ChannelConnectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChannelConnectionController.m; sourceTree = "<group>"; };
+		3714CB9A1ADB620500973CEA /* MusicStreamConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicStreamConnection.h; sourceTree = "<group>"; };
+		3714CB9B1ADB620500973CEA /* MusicStreamConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicStreamConnection.m; sourceTree = "<group>"; };
 		373BC0581AA752B8009BB79D /* SameSound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SameSound.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		373BC0691AA752B8009BB79D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		373BC06B1AA752B8009BB79D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -166,6 +175,8 @@
 				373FF5EE1AC35C9500E73D00 /* PostMusicViewController.m */,
 				37C697A81ACB920300BFE7C1 /* GetMusicViewController.h */,
 				37C697A91ACB920300BFE7C1 /* GetMusicViewController.m */,
+				3714CB941ADB29C000973CEA /* ChannelConnectionController.h */,
+				3714CB951ADB29C000973CEA /* ChannelConnectionController.m */,
 				373FF5EB1AC35C9500E73D00 /* PageContentViewController.h */,
 				373FF5EC1AC35C9500E73D00 /* PageContentViewController.m */,
 				373FF5F11AC35C9500E73D00 /* ViewController.h */,
@@ -183,6 +194,10 @@
 				373FF60E1AC3662800E73D00 /* RESTHelper.m */,
 				3714CB8B1ADADEB700973CEA /* Synchronizer.h */,
 				3714CB8C1ADADEB700973CEA /* Synchronizer.m */,
+				3714CB8E1ADB273000973CEA /* ChannelConnection.h */,
+				3714CB8F1ADB273000973CEA /* ChannelConnection.m */,
+				3714CB9A1ADB620500973CEA /* MusicStreamConnection.h */,
+				3714CB9B1ADB620500973CEA /* MusicStreamConnection.m */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -319,6 +334,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3714CB8D1ADADEB700973CEA /* Synchronizer.m in Sources */,
+				3714CB901ADB273000973CEA /* ChannelConnection.m in Sources */,
 				373FF5FD1AC35C9500E73D00 /* ViewController.m in Sources */,
 				373FF5FE1AC35C9500E73D00 /* HTTPMessage.m in Sources */,
 				373FF6041AC35DDD00E73D00 /* NetworkManager.m in Sources */,
@@ -331,6 +347,8 @@
 				373FF5FB1AC35C9500E73D00 /* PostMusicViewController.m in Sources */,
 				373FF60C1AC3608400E73D00 /* main.m in Sources */,
 				373FF5F91AC35C9500E73D00 /* GetJSONViewController.m in Sources */,
+				3714CB961ADB29C000973CEA /* ChannelConnectionController.m in Sources */,
+				3714CB9C1ADB620500973CEA /* MusicStreamConnection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
